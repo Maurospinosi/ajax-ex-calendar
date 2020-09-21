@@ -6,10 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Calendario delle festività 2018</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+  <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1 id="title"></h1>
+      <div class="arr">
+        <strong>&larr;</strong>
+        <div class="prev m"> Precedente</div>
+        <div class="next m">Successivo</div>
+        <strong>&rarr;</strong>
+      </div>
+    </header>
 
+    <ul id="mese" class="list">
+
+    </ul>
+  </div>
+
+
+  <script id="month-template" type="text/x-handlebars-template">
+    <li class="day" data-hol={{holiday}}>{{day}} {{month}}</li>
+  </script>
 <script type="text/javascript" src="js/menu.js"></script>
 </body>
 </html>
