@@ -18,7 +18,7 @@ $(document).ready(function() {
       renderHolidays(momentDate);
     }
   });
-
+  
   $( ".next" ).click(function() {
     if (momentDate.format("M") == 12){
       alert("Non puoi andare a Gennaio 2018!");
@@ -28,9 +28,9 @@ $(document).ready(function() {
       renderHolidays(momentDate);
     }
   });
-
 });
 
+//----------------------------------------------------------//
 //FUNZIONI//
 //Funzione che stampa il mese
 function renderCalendar (momentDate){
@@ -77,7 +77,7 @@ function addZero (num) {
   }
   return num;
 }
-
+//Chiamata API
 function renderHolidays(momentDate) {
   $.ajax(
     {
