@@ -1,10 +1,6 @@
 // Descrizione:
 // Creiamo un calendario dinamico con le festività.
 // Il calendario partirà da gennaio 2018 e si concluderà a dicembre 2018
-// (unici dati disponibili sull’API).
-// Milestone 1
-// Creiamo il mese di Gennaio, e con la chiamata all'API inseriamo le festività.
-
 $(document).ready(function() {
   // Data di partenza del calendario
   var date = "2018-01-01";
@@ -30,8 +26,8 @@ $(document).ready(function() {
     var html = template(context);
 
     $("#mese").append(html);
-
   }
+
   $.ajax(
     {
       "url": " https://flynn.boolean.careers/exercises/api/holidays",
